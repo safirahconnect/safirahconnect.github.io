@@ -134,6 +134,9 @@
     grid-template-columns: 1fr;
     padding: 12px;
   }
+  .projeto-link h3::before {
+    left: -16px;
+  }
 
   .projeto-link span {
     order: initial;
