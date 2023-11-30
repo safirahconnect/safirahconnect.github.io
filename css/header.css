@@ -44,15 +44,12 @@
   }
 
   .header-menu a {
-    border: 2px solid #aa0ad2;
-    background: #fae8ff;
-    color: #180021;
+    border: 2px solid #ccc;
     border-radius: 8px;
   }
 
   .header-menu a:hover {
-    background: linear-gradient(180deg, #c82cff, #9100c3);
-    color: #fae8ff;
+    background: #ededed;
   }
 
   .header-menu a::after {
