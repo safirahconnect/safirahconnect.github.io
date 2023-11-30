@@ -10,6 +10,10 @@
   background: linear-gradient(180deg, #c82cff, #9100c3);
 }
 
+.introducao .paragrafo {
+  margin-bottom: 32px;
+}
+
 @media (max-width: 1000px) {
   .introducao {
     gap: 60px;
