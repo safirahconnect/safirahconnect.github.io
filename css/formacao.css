@@ -1,0 +1,208 @@
+.formacao-bg {
+  background-color: #1a1a1a;
+}
+
+.formacao {
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 80px;
+  position: relative;
+}
+
+.formacao::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 80px;
+  background: url("/img/clipe.svg") no-repeat;
+  position: absolute;
+  bottom: -40px;
+  right: 20px;
+}
+
+.formacao .titulo {
+  color: #fafafa;
+  grid-column: 1/-1;
+}
+
+.formacao .titulo::before {
+  background: #000;
+}
+
+.formacao .paragrafo {
+  color: #ccc;
+  margin-bottom: 60px;
+}
+
+.formacao strong {
+  color: #fff;
+}
+
+.formacao-lista {
+  grid-column: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.formacao-lista li {
+  background: #000;
+  box-shadow: 0px 2px 2px -1px #000;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.formacao-lista span {
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+  color: #717171;
+}
+
+.formacao-lista span:first-child {
+  text-transform: uppercase;
+  letter-spacing: 2.5%;
+  font-weight: 700;
+}
+
+.formacao-lista h3 {
+  margin-bottom: 30px;
+  flex: 1;
+  color: #fafafa;
+  font-size: 1rem;
+  line-height: 1.25;
+  position: relative;
+}
+
+.formacao-lista h3::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #c82cff, #9100c3);
+  position: absolute;
+  left: -24px;
+}
+
+.formacao-extra {
+  grid-column: 2;
+  grid-row: 2/4;
+}
+
+.formacao-extra h3 {
+  color: #717171;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.formacao-extra h3::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -28px;
+}
+
+.formacao-extra h3:first-of-type::before {
+  background: url("/img/cursos.svg") no-repeat;
+}
+
+.formacao-extra h3:last-of-type::before {
+  background: url("/img/idiomas.svg") no-repeat;
+}
+
+.formacao-extra ul:first-of-type {
+  margin-bottom: 60px;
+}
+
+.formacao-extra li + li {
+  margin-top: 15px;
+}
+
+.formacao-extra li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url("/img/circulo.svg") no-repeat;
+}
+
+.formacao-extra li {
+  color: #f7f7f7;
+  font-size: 1.25rem;
+  line-height: 1;
+  display: grid;
+  align-items: center;
+  gap: 8px;
+}
+
+.formacao-extra ul:first-of-type li {
+  grid-template-columns: auto 1fr auto;
+}
+
+.formacao-extra ul:last-of-type li {
+  grid-template-columns: auto auto 1fr;
+}
+
+.formacao-extra span {
+  color: #717171;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 800px) {
+  .formacao {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .formacao .paragrafo {
+    margin-bottom: 30px;
+  }
+
+  .formacao-lista {
+    margin-bottom: 60px;
+  }
+
+  .formacao-extra {
+    grid-area: initial;
+  }
+
+  .formacao-extra h3::before {
+    display: block;
+    top: -24px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .formacao-lista {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .formacao::after {
+    display: none;
+  }
+
+  .formacao-lista span {
+    font-size: 0.75rem;
+  }
+
+  .formacao-extra h3,
+  .formacao-extra li {
+    font-size: 1rem;
+  }
+
+  .formacao-extra span {
+    font-size: 0.875rem;
+  }
+}

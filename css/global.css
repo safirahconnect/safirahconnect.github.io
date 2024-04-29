@@ -1,0 +1,129 @@
+body {
+  font-family: "Lato", Arial, sans-serif;
+  margin: 0px;
+  color: #0e0e0e;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 12px 32px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #c82cff, #9100c3);
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+button::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 18px;
+  background: url("../img/seta.svg") no-repeat;
+}
+
+button:hover {
+  background: linear-gradient(180deg, #c214ff, #74009c);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 0;
+}
+
+.titulo::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  left: -8px;
+}
+
+.paragrafo {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #2e2e2e;
+  max-width: 40ch;
+}
+
+@media (max-width: 1000px) {
+  .titulo {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .titulo {
+    font-size: 2.8rem;
+  }
+  .titulo::before {
+    width: 32px;
+    height: 32px;
+  }
+  .paragrafo {
+    font-size: 1.3rem;
+    max-width: initial;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .titulo::before {
+    height: 4px;
+    left: 0px;
+    top: -4px;
+    border-radius: 2px;
+  }
+  .paragrafo {
+    font-size: 1rem;
+  }
+}
